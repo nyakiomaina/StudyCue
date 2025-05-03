@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>StudyCue</h1>
+            <p class="subtitle">Your Weekly Reading Companion</p>
+        </header>
+
+        <main>
+            <section id="weekly-planning" class="hidden">
+                <h2>Weekly Planning</h2>
+                <form id="topic-form">
+                    <div class="form-group">
+                        <label for="title">Topic Title</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="time-minutes">Reading Time (minutes)</label>
+                        <input type="number" id="time-minutes" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="pages">Pages (optional)</label>
+                        <input type="number" id="pages" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" required>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="estimated-time">Estimated Time (minutes)</label>
+                        <input type="number" id="estimated-time" required min="1">
+                    </div>
+                    <button type="submit">Add Topic</button>
+                </form>
+            </section>
+
+            <section id="daily-view">
+                <h2>Today's Topics</h2>
+                <div id="topics-list"></div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
